@@ -19,6 +19,8 @@ public class BankingSystemMain implements ICustomDefine {
 	}
 	public static void main(String[] args) {
 		
+		System.out.println("1차프로젝트(학원)");
+		
 		AccountManager manager = new AccountManager();
 		Scanner scan = new Scanner(System.in);
 		AutoSaver autoSaver= null; //프로그램 실행 시 쓰레드 참조변수 선언

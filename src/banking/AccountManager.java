@@ -174,15 +174,15 @@ public class AccountManager {
 				Account ac = itr.next(); //계정에 관한 설정
 				if(account.equals(ac.account)) {  //검색한 계좌번호가 저장된 계좌번호와 같을 때
 					if(withdraw<0) { //-출금액
-						System.out.println("- 숫자라 출금이 불가능합니다.1");
+						System.out.println("- 숫자라 출금이 불가능합니다.");
 						return; //실행잘됨
 					}
 					if(withdraw==0) {
-						System.out.println("출금액이 0이라 불가능합니다.2");
+						System.out.println("출금액이 0이라 불가능합니다.");
 						return; //실행잘됨
 					}
 					if(withdraw%1000!=0){
-						System.out.println("출금 단위가 아니라 출금이 불가능합니다.3");
+						System.out.println("출금 단위가 아니라 출금이 불가능합니다.");
 						System.out.println("└----------------------------------┘");
 					}
 					if(withdraw>0) {
@@ -197,25 +197,24 @@ public class AccountManager {
 								if(select.equalsIgnoreCase("1")) { //alldraw라는 함수 만들어서 
 									ac.balance = 0;
 									
-									System.out.println("YES :금액전체 출금처리 되었습니다.4");
+									System.out.println("YES :금액전체 출금처리 되었습니다.");
 									System.out.println("└----------------------------------┘");
 									
 								}
 								else if(select.equalsIgnoreCase("2")) {
-									System.out.println( "NO 출금요청 취소5");
+									System.out.println( "NO 출금요청 취소");
 									System.out.println("└----------------------------------┘");
 								}
 							}	
 							else{
 								ac.balance -= withdraw;
-								System.out.println("출금되었습니다.6"); //이쪽으로 
+								System.out.println("출금되었습니다."); //이쪽으로 
 								System.out.println("└----------------------------------┘");	
 							}	
 						}
-					}
-					
-				}else if(findAccount==false) {
-						System.out.println("등록되지 않은 계좌번호입니다.7"); 						
+					}else if(findAccount==false) {
+						System.out.println("등록되지 않은 계좌번호입니다.7"); 
+					}	
 				}	
 			}
 		}	

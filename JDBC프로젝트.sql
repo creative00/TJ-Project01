@@ -662,3 +662,6 @@ print member_auth; --0 인덱스 내 데이터 자체가 존재하지 않은 아이디
 
 
 
+SELECT G_IDX, GOODS_NAME, GOODS_PRICE, to_char(regidate, 'yyyy.mm.dd hh24:mi') d1,P_CODE FROM sh_goods;
+
+insert into sh_goods values (G_IDX, GOODS_NAME, GOODS_PRICE);
